@@ -10,54 +10,54 @@ console.log(params.name);
 
 async function main() {
 
-  // try {
-  //   await run("verify:verify", {
-  //     address: params.mooneyAddr ,
-  //     contract: "contracts/Mooney.sol:Mooney",
-  //   });
-  // } catch (error) {
-  //   console.log("error:", error.toString());
-  // }
+  try {
+    await run("verify:verify", {
+      address: params.mooneyAddr ,
+      contract: "contracts/Mooney.sol:Mooney",
+    });
+  } catch (error) {
+    console.log("error:", error.toString());
+  }
 
-  // try { 
-  //   await run("verify:verify", {
-  //     address: params.luckyAddr,
-  //     contract: "contracts/Lucky.sol:Lucky",
-  //     constructorArguments: [
-  //       params.totalSuppl_Luck_
-  //     ],
-  //   });
-  // } catch (error) {
-  //   console.log("error:", error.toString());
-  // } 
+  try { 
+    await run("verify:verify", {
+      address: params.luckyAddr,
+      contract: "contracts/Lucky.sol:Lucky",
+      constructorArguments: [
+        params.totalSuppl_Luck_
+      ],
+    });
+  } catch (error) {
+    console.log("error:", error.toString());
+  } 
 
-  // try { 
-  //   await run("verify:verify", {
-  //     address:  params.metaNFTAddr,
-  //     contract: "contracts/LuckDAOMeta.sol:LuckDAOMeta",
-  //     constructorArguments: [
-  //       params.NFTmaxBatchSize_,
-  //       params.NFTcollectionSize_,
-  //       params.luckyAddr
-  //     ],
-  //   });
-  // } catch (error) {
-  //   console.log("error:", error.toString());
-  // }
+  try { 
+    await run("verify:verify", {
+      address:  params.metaNFTAddr,
+      contract: "contracts/LuckDAOMeta.sol:LuckDAOMeta",
+      constructorArguments: [
+        params.NFTmaxBatchSize_,
+        params.NFTcollectionSize_,
+        params.luckyAddr
+      ],
+    });
+  } catch (error) {
+    console.log("error:", error.toString());
+  }
 
 
-  // try { 
-  //   await run("verify:verify", {
-  //     address:  params.luckyAirdropAddr ,
-  //     contract: "contracts/LuckyAirdrop.sol:LuckyAirdrop",
-  //     constructorArguments: [ 
-  //       params.luckyAddr,
-  //       params.metaNFTAddr
-  //     ],
-  //   });
-  // } catch (error) {
-  //   console.log("error:", error.toString());
-  // }
+  try { 
+    await run("verify:verify", {
+      address:  params.luckyAirdropAddr ,
+      contract: "contracts/LuckyAirdrop.sol:LuckyAirdrop",
+      constructorArguments: [ 
+        params.luckyAddr,
+        params.metaNFTAddr
+      ],
+    });
+  } catch (error) {
+    console.log("error:", error.toString());
+  }
 
   try {
     await run("verify:verify", {

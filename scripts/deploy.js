@@ -15,46 +15,46 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
   
 
-  // const Mooney = await ethers.getContractFactory("Mooney");
-  // const mooney = await Mooney.deploy();
-  // const mooneyAddr = mooney.address;
-  // console.log("Mooney address:", mooneyAddr);
-  // await mooney.deployed();
-  // params.mooneyAddr=mooneyAddr;
+  const Mooney = await ethers.getContractFactory("Mooney");
+  const mooney = await Mooney.deploy();
+  const mooneyAddr = mooney.address;
+  console.log("Mooney address:", mooneyAddr);
+  await mooney.deployed();
+  params.mooneyAddr=mooneyAddr;
 
 
-  // const Lucky = await ethers.getContractFactory("Lucky");
-  // const totalSuppl = params.totalSuppl_Luck_;
-  // console.log("totalSuppl of Lucky = ", totalSuppl);
-  // const lucky = await Lucky.deploy(totalSuppl);
-  // const luckyAddr = lucky.address;
-  // console.log("luckytoken address:", luckyAddr);
-  // await lucky.deployed();
-  // params.luckyAddr=luckyAddr;
+  const Lucky = await ethers.getContractFactory("Lucky");
+  const totalSuppl = params.totalSuppl_Luck_;
+  console.log("totalSuppl of Lucky = ", totalSuppl);
+  const lucky = await Lucky.deploy(totalSuppl);
+  const luckyAddr = lucky.address;
+  console.log("luckytoken address:", luckyAddr);
+  await lucky.deployed();
+  params.luckyAddr=luckyAddr;
 
 
-  // var maxBatchSize_=params.NFTmaxBatchSize_;
-  // var collectionSize_=params.NFTcollectionSize_;
-  // var luckyAddr_=params.luckyAddr;//lucky.address;
-  // const LuckDAOMeta = await ethers.getContractFactory('LuckDAOMeta');
-  // const luckDAOMeta = await LuckDAOMeta.deploy(
-  //   maxBatchSize_,collectionSize_,luckyAddr_
-  // );
-  // console.log("LuckDAOMeta address:", luckDAOMeta.address);
-  // await luckDAOMeta.deployed();
-  // params.metaNFTAddr=luckDAOMeta.address;
+  var maxBatchSize_=params.NFTmaxBatchSize_;
+  var collectionSize_=params.NFTcollectionSize_;
+  var luckyAddr_=params.luckyAddr;//lucky.address;
+  const LuckDAOMeta = await ethers.getContractFactory('LuckDAOMeta');
+  const luckDAOMeta = await LuckDAOMeta.deploy(
+    maxBatchSize_,collectionSize_,luckyAddr_
+  );
+  console.log("LuckDAOMeta address:", luckDAOMeta.address);
+  await luckDAOMeta.deployed();
+  params.metaNFTAddr=luckDAOMeta.address;
 
 
-  // var luckyAddr_ = params.luckyAddr;
-  // var metaNFTAddr_=params.metaNFTAddr; 
-  // const LuckyAirdrop = await ethers.getContractFactory('LuckyAirdrop');
-  // const luckyAirdrop = await LuckyAirdrop.deploy(
-  //   luckyAddr_,
-  //   metaNFTAddr_
-  // );
-  // console.log("LuckyAirdrop address:", luckyAirdrop.address);
-  // await luckyAirdrop.deployed();
-  // params.luckyAirdropAddr=luckyAirdrop.address;
+  var luckyAddr_ = params.luckyAddr;
+  var metaNFTAddr_=params.metaNFTAddr; 
+  const LuckyAirdrop = await ethers.getContractFactory('LuckyAirdrop');
+  const luckyAirdrop = await LuckyAirdrop.deploy(
+    luckyAddr_,
+    metaNFTAddr_
+  );
+  console.log("LuckyAirdrop address:", luckyAirdrop.address);
+  await luckyAirdrop.deployed();
+  params.luckyAirdropAddr=luckyAirdrop.address;
 
 
   var subscriptionId_=params.subscriptionId_; 
